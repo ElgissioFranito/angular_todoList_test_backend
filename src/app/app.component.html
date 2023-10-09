@@ -1,0 +1,27 @@
+<div class="all">
+  <div class="header">
+    <div class="title">Todo List angular</div>
+    <div class="signature">By ElgissioFranito</div>
+  </div>
+  <div class="body">
+    <div class="content">
+      <div class="contentHeader">
+        <input type="text" class="searchInput">
+        <button type="submit" class="searchButton"> 🔍 </button>
+        <button class="addTask"> ➕ </button>
+      </div>
+      <div class="contentBody">
+        <div class="tasks" *ngFor="let t of tasks">
+          <div class="task">
+            <div><input type="checkbox" [(ngModel)]="t.isChecked"> 
+            <span [ngClass]="{stroked:t.isChecked}">{{t.title}}</span>  
+            </div> 
+            <div [ngClass]="{stroked:t.isChecked}"> {{t.date}}</div> 
+            <div [ngClass]="{stroked:t.isChecked}"> {{t.heure}}</div> 
+            <div [ngClass]="{stroked:t.isChecked}"> {{t.description}}</div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

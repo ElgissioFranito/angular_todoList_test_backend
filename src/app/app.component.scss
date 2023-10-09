@@ -1,0 +1,89 @@
+.all {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: yellow;
+    position: relative;
+    overflow: hidden;
+
+    .header {
+        height: 15%;
+        width: 100%;
+        background: linear-gradient(rgb(181, 0, 0),red);
+        box-shadow: 0 1px 20px rgba(0, 0, 0, 0.756);
+        position: absolute;
+        top: 0;
+        color: aliceblue;
+        text-align: center;
+        z-index: 5;
+
+        .title{
+            font-size: 4em;
+        }
+
+    }
+
+    .body {
+        position: relative;
+        top: 15%;
+        height: 85vh;
+        background: linear-gradient(rgb(231, 231, 231),rgb(164, 163, 163));
+        
+        .content{
+            padding: 20px 50px;  
+            overflow-x: hidden;   
+            overflow-y: auto;   
+
+            .contentHeader{
+                width: 100%;
+                height: 50px;
+                display: flex;
+                justify-content: space-around;
+                margin: 20px 0;
+
+
+                .searchInput{
+                    width: 80%;
+                    border: blue solid 1px;
+                    border-radius: 10px;
+                }
+                
+                .searchButton{
+                    width: 8%;
+                    font-size: 1.5em;
+                    border-radius: 10px;
+                    border: blue solid 1px;
+                }
+                
+                .addTask{
+                    width: 8%;
+                    font-size: 1.5em;
+                    border-radius: 10px;
+                    border: blue solid 1px;
+                }
+            }
+
+            .contentBody{
+                
+                .tasks{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .task{
+                        width: 720px;
+                        margin: 10px;
+                        border: 1px solid green;
+                        border-radius: 20px;
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.stroked{
+    text-decoration: line-through;
+}
