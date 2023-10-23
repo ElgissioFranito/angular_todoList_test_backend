@@ -13,12 +13,14 @@
       <div class="contentBody">
         <div class="tasks" *ngFor="let t of tasks">
           <div class="task">
-            <div><input type="checkbox" [(ngModel)]="t.isChecked"> 
-            <span [ngClass]="{stroked:t.isChecked}">{{t.title}}</span>  
-            </div> 
-            <div [ngClass]="{stroked:t.isChecked}"> {{t.date}}</div> 
-            <div [ngClass]="{stroked:t.isChecked}"> {{t.heure}}</div> 
-            <div [ngClass]="{stroked:t.isChecked}"> {{t.description}}</div> 
+            <div><input type="checkbox" [(ngModel)]="t.isChecked">
+            </div>
+            <div class="detail">
+              <div [ngClass]="{stroked:t.isChecked}">{{t.title}}</div>
+              <div [ngClass]="{stroked:t.isChecked}"> {{t.date}}</div>
+              <div [ngClass]="{stroked:t.isChecked}"> {{t.heure}}</div>
+              <div [ngClass]="{stroked:t.isChecked}"> {{t.description}}</div>
+            </div>
           </div>
         </div>
       </div>
