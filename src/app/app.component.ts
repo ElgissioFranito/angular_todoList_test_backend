@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from './services/api.service';
+import { Todo } from './interfaces/todo';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,11 @@ import { ApiService } from './services/api.service';
 })
 export class AppComponent {
   title = 'angular_todoList_test_backend';
-  tasks : any[];
+  tasks : Todo[];
+  filteredTodos: Todo[] = [];
 
-  constructor(private http:ApiService){
-    this.tasks = http.task;
+  constructor(private apiService:ApiService){
+    this.tasks = apiService.task;
   }
 
 }

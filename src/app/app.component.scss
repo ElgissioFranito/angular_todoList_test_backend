@@ -9,7 +9,7 @@
     .header {
         height: 15%;
         width: 100%;
-        background: linear-gradient(rgb(181, 0, 0),red);
+        background: linear-gradient(rgb(181, 0, 0), red);
         box-shadow: 0 1px 20px rgba(0, 0, 0, 0.756);
         position: absolute;
         top: 0;
@@ -17,7 +17,7 @@
         text-align: center;
         z-index: 5;
 
-        .title{
+        .title {
             font-size: 4em;
         }
 
@@ -27,14 +27,14 @@
         position: relative;
         top: 15%;
         height: 85vh;
-        background: linear-gradient(rgb(231, 231, 231),rgb(164, 163, 163));
-        
-        .content{
-            padding: 20px 50px;  
-            overflow-x: hidden;   
-            overflow-y: auto;   
+        background: linear-gradient(rgb(231, 231, 231), rgb(164, 163, 163));
 
-            .contentHeader{
+        .content {
+            padding: 20px 50px;
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            .contentHeader {
                 width: 100%;
                 height: 50px;
                 display: flex;
@@ -42,42 +42,111 @@
                 margin: 20px 0;
 
 
-                .searchInput{
+                .searchInput {
                     width: 80%;
                     border: blue solid 1px;
                     border-radius: 10px;
+                    padding: 0 10px;
+
                 }
-                
-                .searchButton{
+
+                .searchButton {
                     width: 8%;
                     font-size: 1.5em;
                     border-radius: 10px;
                     border: blue solid 1px;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        background: rgba(0, 102, 255, 0.2);
+                    }
                 }
-                
-                .addTask{
+
+                .addTask {
                     width: 8%;
                     font-size: 1.5em;
                     border-radius: 10px;
                     border: blue solid 1px;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        background: rgba(0, 102, 255, 0.2);
+                    }
+                }
+
+                svg {
+                    width: 30px;
+                    color: #555;
                 }
             }
 
-            .contentBody{
-                
-                .tasks{
-                    width: 100%;
+            .contentBody {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .task {
+                    width: 720px;
+                    margin: 10px;
+                    border: 1px solid green;
+                    border-radius: 20px;
+                    padding: 15px;
                     display: flex;
-                    flex-direction: column;
+                    justify-content: space-between;
                     align-items: center;
-                    
-                    .task{
-                        width: 720px;
-                        margin: 10px;
-                        border: 1px solid green;
-                        border-radius: 20px;
-                        padding: 15px;
+
+                    .bodyTodo {
                         display: flex;
+
+                        .checkbox {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 20px;
+
+                            input[type="checkbox"] {
+                                width: 20px;
+                                height: 20px;
+                                transition: 0.3s;
+
+                                &:checked {
+                                    width: 40px;
+                                    height: 40px;
+                                    background: blue;
+                                }
+
+                                &:hover{
+                                    scale: 1.1;
+                                }
+                            }
+                        }
+
+
+                    }
+
+                    .updateTodo {
+                        width: 50px;
+
+                        .updateButton {
+                            width: 100%;
+                            font-size: 1.5em;
+                            border-radius: 10px;
+                            border: 1px solid green;
+                            cursor: pointer;
+                            transition: 0.3s;
+
+                            &:hover {
+                                background: rgba(0, 255, 76, 0.2);
+                                scale: 1.1;
+                            }
+
+                            svg {
+                                width: 25px;
+                                color: #555;
+                            }
+                        }
                     }
                 }
             }
@@ -85,6 +154,6 @@
     }
 }
 
-.stroked{
+.stroked {
     text-decoration: line-through;
 }
