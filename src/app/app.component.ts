@@ -9,11 +9,18 @@ import { Todo } from './interfaces/todo';
 })
 export class AppComponent {
   title = 'angular_todoList_test_backend';
-  tasks : Todo[];
+  todos : Todo[] = [];
   filteredTodos: Todo[] = [];
 
   constructor(private apiService:ApiService){
-    this.tasks = apiService.task;
+    this.apiService.getTodos().subscribe(
+      {
+        next : (data : Todo[]) => {
+          this.todos = data;
+          this.filteredTodos = data;
+        }
+      }
+    );
   }
 
 }
